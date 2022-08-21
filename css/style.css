@@ -1,0 +1,99 @@
+:root{
+    --tint:  #00fe00;
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: 0;
+}
+
+.game-board{
+    width: 100%;
+    height: 500px;
+    border: 1px solid black;
+    margin: 0 auto;
+    position: relative;
+    overflow: hidden; /*don't appear outside the div*/
+    background: linear-gradient(#5fb4e8, #ffffff);
+}
+.clouds{
+    position:absolute;
+    top: 30px;
+    width: 380px;
+    animation: clouds-animation 20s infinite linear;
+}
+.pipe{
+    position:absolute;
+    bottom: 0;
+    width: 80px;
+    animation: pipe-animation 1.5s infinite linear;
+}
+.mario{
+    width:150px;
+    bottom: 0;
+    position: absolute;
+}
+.mario-animation{
+    animation: mario-animation 500ms ease-out;
+}
+
+@keyframes pipe-animation{
+    from{
+        right:-80px;
+    }
+    to {
+        right: 100%;
+    }
+}
+
+@keyframes mario-animation{
+    0%{
+        bottom: 0;
+    }
+    40%{
+        bottom: 180px;
+    }
+    50%{
+        bottom: 180px;
+    }
+    60%{
+        bottom: 180px;
+    }
+    100%{
+        bottom: 0;
+    }
+}
+@keyframes clouds-animation{
+    from{
+        right: -400px;
+    }
+    to{
+        right: 100%;
+    }
+}
+
+.score{
+    position:absolute;
+    display: inline;
+    margin-left: 80%;
+    color: var(--tint);
+    margin-top: 10px;
+    text-shadow: 1px 1px 1px black;
+}
+.txtscore{
+    position: absolute;
+    display: inline-block;
+    margin-left: 87%;
+    color: var(--tint);
+    margin-top: 10px;
+    text-shadow: 1px 1px 1px black;
+}
+.gram{
+    width: 100%;
+    bottom: 0;
+    background: linear-gradient(rgb(17, 255, 0),#228B22);
+    height: 15px;
+    position: absolute;
+    margin: 0 auto;
+    padding: 0 auto;
+}
