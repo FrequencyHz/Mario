@@ -1,6 +1,5 @@
 # Mario
 inspired by the super mario game </br>
-based on the video: https://www.youtube.com/watch?v=r9buAwVBDhA
 ##
 <h1>Runnig</h1>
 
